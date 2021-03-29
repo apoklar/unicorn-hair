@@ -1,0 +1,11 @@
+.hero {
+    padding: .25% .5%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.btn {
+    background-color: skyblue;
+}
+
