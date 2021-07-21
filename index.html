@@ -9,22 +9,32 @@
     <title>Weather Dashboard</title>
 </head>
 
-<body>
+<body class="flex-column min-100-vh">
     <header class="hero">
         <h1 class="app-title">Weather Dashboard</h1>
     </header>
 
-    <main>
-        <h2 class="ml-5 col-12">Search for a City:</h2>
-        <input type="text" placeholder="">
-        <button class="btn"><span class="oi oi-magnifying-glass"></span></button>
-    </main>
+    <main class="flex-row justify-space-between">
+        <div class="col-12 col-md-4">
+          <div class="card">
+            <h3 class="card-header text-uppercase">Search for a City:</h3>
+            <form id="user-form" class="card-body">
+              <input name="city" id="city" type="text" autofocus="true" class="form-input" placeholder="San Francisco"/>
+              <button type="submit" class="btn" id="search">Search</button>
+            </form>
+          </div>
+
 
     <div>
         <h2 class="col-12 col-md-8">5-Day Forecast:</h2>
+        <h2 class="card-title">Current Forecast</h2>
     </div>
 
-    <script src="api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <!-- <script src="api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}"></script> -->
     <script src="./assets/script.js"></script>
 </body>
 

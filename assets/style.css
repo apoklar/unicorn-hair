@@ -7,5 +7,12 @@
 
 .btn {
     background-color: skyblue;
+    font-size: 1.3rem;
+    text-decoration:none;
+    padding: 6px 5px;
+    border-radius: 12px;
 }
+
+
+
 
