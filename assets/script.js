@@ -5,6 +5,22 @@ function displayCurrent(city) {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`)
     .then(res => res.json())
     .then(data => {
+        fetch(
+            `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
+          )
+            // Convert the response to JSON
+            .then(function(response) {
+              return response.json();
+            })
+            .then(function(response) {
+              var responseContainerEl = document.querySelector('#current');
+
+              var currentWeather = document.createElement('current');
+
+              currentWeather.setAttribute('src', response.data.url);
+ 
+              responseContainerEl.appendChild(currentWeather);
+            });
         // put stuff on page
         console.log(data);
         fiveDay(city);
